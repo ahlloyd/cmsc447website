@@ -1,0 +1,114 @@
+/* Site */
+
+html {
+    min-height: 100%;
+    display: flex;
+}
+
+.urs-site {
+    flex-basis: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#212529, #181f26);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #EFEFEF;
+}
+
+
+/* Vertical center */
+
+.urs-cards .urs-card a,
+.urs-cards .urs-card,
+.urs-backdrop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Header */
+
+.urs-backdrop {
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+
+/* Cards */
+
+@media (min-width: 768px) {
+    .urs-cards .cols-two .urs-card:nth-child(odd) {
+        align-items: flex-end;
+    }
+    .urs-cards .cols-two .urs-card:nth-child(even) {
+        align-items: flex-start;
+    }
+    .urs-cards .cols-two .urs-card:nth-child(odd):nth-last-child(1) {
+        align-items: center;
+    }
+}
+
+.urs-cards .urs-card a {
+    width: 250px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    color: inherit;
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 1em;
+    box-sizing: border-box;
+    margin: 10px 0 10px 0;
+}
+
+.urs-cards .urs-card a:hover {
+    animation-name: hop;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+}
+
+
+/* Ad hoc */
+
+@media (min-width: 768px) {
+    .urs-backdrop {
+        min-height: 25vh;
+    }
+}
+
+.urs-image {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    margin-bottom: 1em;
+}
+
+.urs-main {
+    flex-grow: 2;
+    padding-bottom: 1em;
+}
+
+.urs-site center {
+    display: block;
+    text-align: center;
+}
+
+.urs-site center:last-of-type {
+    padding-bottom: 1em;
+}
+
+hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* Animations */
+
+@keyframes hop {
+    50% {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
